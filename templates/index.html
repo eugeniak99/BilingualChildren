@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+<html class="glowny" lang="pl">
+    <head>
+        <title>Serwis dla rodziców dzieci dwujęzycznych</title>
+		<link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		
+		<link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+		<link href="https://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+	    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>
+        <script src="https://netdna.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+      
+    <script type="text/javascript" src="{{ url_for('static', filename='js/leader-line.min.js') }}"></script>
+		
+	</head>
+	<header>
+		<div class="header" id="myBtn">
+			<nav>
+				<ul id="menu">
+				  <li style="margin:2%;"><a href="#ostronie">O stronie</a></li>
+				  <li style="margin:2%;"><a href="#rodzina">Życie rodzinne</a></li>
+				  <li style="margin:2%;"><a href="#edukacja">Szkoła i edukacja</a></li>
+				  <li style="margin:2%;"><a href="#dodatkowe">Materiały dodatkowe</a></li>
+				  <li style="margin:2%;"><a href="#personalexp">Doświadczenia</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>	
+    <body>
+	<div id="all">
+		
+		<div class="naglowek" id="start" style="background-repeat:no-repeat; background-size: 100%; background-attachment: fixed; position: static; background-color:white">
+    
+		
+				<h3 style="margin-left: 1%;">Serwis wspomagający rodziców i opiekunów dzieci dwujęzycznych</h3>
+				
+				<h4> Wybierz jedną z opcji z menu poniżej</h4>
+			</div>
+		<div class="links">
+           
+			<ul class="links__list" id="lista" style="--item-total:5">
+
+			   
+				<li class="links__item ostronie" id="end" style="--item-count:1">
+				    
+					<a class="links__link"  href="#ostronie">
+						<svg class="links__icon" viewBox="0 0 23 23">
+							<path xmlns="http://www.w3.org/2000/svg" d="M12,0C5.925,0,1,4.477,1,10c0,5.523,4.925,10,11,10v4c0,0,11-5.361,11-14C23,4.477,18.075,0,12,0z M13.224,15.126h-2.447 V8.159h2.447V15.126z M12.005,6.199c-1.324,0-1.332-0.978-1.332-1.203c0-0.23-0.001-1.195,1.332-1.195 c1.333,0,1.331,0.965,1.331,1.195C13.335,5.221,13.328,6.199,12.005,6.199z"/>
+						</svg>
+						<span class="links__text">O stronie</span>
+					</a>
+					
+				</li>
+				
+				
+				<li class="links__item rodzina" id="destination2" style="--item-count:2">
+					<a class="links__link" href="#rodzina">       
+						<img src="static/images/family.svg#svgView(viewBox(10,0,100,100))">
+						<span class="links__text">Życie rodzinne</span></a>
+				</li>
+				
+				<li class="links__item szkola" id="destination5" style="--item-count:3">
+					<a class="links__link" href="#edukacja">
+						<img style="height: 200px;" src="static/images/school.svg#svgView(viewBox(-270, 250, 1000, 100))">
+						<span class="links__text" style="font-size: 14px;">Szkoła i edukacja</span></a>
+				</li>
+				<li class="links__item dodatkowe" id="destination4"  style="--item-count:4">
+					<a class="links__link" href="#dodatkowe">
+						<svg class="links__icon" viewBox="23 2 3 45">
+							<path xmlns="http://www.w3.org/2000/svg" d="M 6 2 C 3.794 2 2 3.794 2 6 L 2.0175781 30.681641 L 2.0332031 30.681641 C 2.0242031 30.788641 2 30.891 2 31 C 2 33.206 3.794 35 6 35 L 18 35 L 18 33 L 6 33 C 4.897 33 4 32.103 4 31 C 4 29.897 4.897 29 6 29 L 18 29 L 18 19 C 18 15.691 20.692 13 24 13 L 30 13 L 30 2 L 6 2 z M 9 7 L 23 7 C 23.552 7 24 7.448 24 8 L 24 10 C 24 10.552 23.552 11 23 11 L 9 11 C 8.448 11 8 10.552 8 10 L 8 8 C 8 7.448 8.448 7 9 7 z M 24 15 C 21.794 15 20 16.794 20 19 L 20.017578 43.681641 L 20.033203 43.681641 C 20.024203 43.788641 20 43.891 20 44 C 20 46.206 21.794 48 24 48 L 48 48 L 48 46 L 24 46 C 22.897 46 22 45.103 22 44 C 22 42.897 22.897 42 24 42 L 48 42 L 48 15 L 24 15 z M 27 20 L 41 20 C 41.552 20 42 20.448 42 21 L 42 23 C 42 23.552 41.552 24 41 24 L 27 24 C 26.448 24 26 23.552 26 23 L 26 21 C 26 20.448 26.448 20 27 20 z"/>
+						</svg>
+						<span class="links__text">Dodatkowe</span></a>
+		
+				</li>
+				<li class="links__item doswiadczenia" id="destination3" style="--item-count:5">
+					<a class="links__link" href="#personalexp">
+						<img src="static/images/blog.svg#svgView(viewBox(-150,300,800,84))">
+						
+						<span class="links__text">Doświadczenia</span></a>
+				</li>
+				
+			</ul>
+		</div>
+		</div>
+		<div id="ostronie" class="spacertop"></div>
+		<div id="ostronie1" class="content">
+			<div class="container">
+				<h1>O stronie</h1>
+				<div class="parent" style="width: 100%;">
+					<div class="div1">
+						<h2>Kim jestem?</h2>
+						<p>Mam na imię Eugenia, jestem autorką tego serwisu i przyszłym psychologiem. 
+						<p>Serwis powstał z myślą o rodzinach dwu- i wielojęzycznych, które chcą zabezpieczyć swojemu dziecku spokojny i harmonijny rozwój, ale też mają pytania i wątpliwości.
+						<p>Nie zabraknie też na stronie informacji dla wykładowców i wychowawców, którzy zetknęli się z takimi dziećmi w swojej pracy, ale nie do końca są pewni dobrych zasad postępowania i pomocy. 
+					</div>
+					<div class="div2"> 
+						<h2>Co znajdziecie na stronie?</h2>
+						<p><a href="#rodzina">Sekcja "Rodzina"</a>:</p>
+						<ul style="list-style-type: disc;">
+							<li>Obalenie mitów o dwujęzyczności</li>
+							<li>Najczęściej zadawane pytania i odpowiedzi</li>							
+						</ul>
+						<a href="#edukacja">Sekcja "Szkoła i edukacja"</a>:
+						<ul style="list-style-type: disc;">
+							<li>Propozycje metod rozwoju czytania i pisma u dzieci dwujęzycznych</li>
+							<li>Przegląd najczęściej zadawanych pytań i odpowiedzi na nie</li>
+							
+						</ul>
+						<a href="#dodatkowe">Sekcja "Dodatkowe"</a>:
+						<ul style="list-style-type: disc;">
+							<li>Dwie dwujęzyczne gry online w językach polskim i angielskim</li>
+							<li>Aplikacje i gry rozwijające do pobrania</li>
+							<li>Polecana literaturę do samoedukacji</li>
+							
+						</ul>
+						<a href="#dodatkowe">Sekcja "Doświadczenia prywatne"</a>:
+						<ul style="list-style-type: disc;">
+							<li>Formularz do komunikacji zwrotnej</li>
+							<li>Doświadczenia i komentarze innych użytkowników serwisu</li>
+						</ul>
+					</div>
+					<div class="div3">
+						<h2>Skąd pochodzą informacje na stronie?</h2>
+						<p>Informacje, umieszczone na stronie, pochodzą ze starannie dobranych przeze mnie źródeł naukowych – książek i artykułów. Ich autorami są renomowani naukowcy, których dziedziną badań jest właśnie dwujęzyczność. 
+						<p>Niestety,  nie jest dużo literatury naukowej w języku polskim w tym temacie.
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="rodzina" class="spacertop"></div>
+		<div class="content" id="rodzina1">
+			<div class="container">
+				<h1>Życie rodzinne</h1>
+				<p style="font-size: 22px;">
+					
+					W tej sekcji zebrałam często wspominane mity o dwujęzyczności zarówno jak najczęściej zadawane pytania na ten temat. Muszę jednak wstępnie uprzedzić wszystkich zainteresowanych tą sekcją, że najprawdopodobniej nie znajdziecie tutaj prostych i oczywistych odpowiedzi. Większość przedstawianych tutaj zagadnień jest dość szeroka i niejednoznaczna. Odpowiedzi na wiele pytań zależą od dużej ilości czynników i na niektóre z nich nie mamy większego wpływu. Mam jednak nadzieję, że przedstawione materiały rozwieją chociażby niektóre wątpliwości a jeśli nie, to skłonią do zgłębiania tematu we własnym zakresie.
+			
+				</p>
+				
+				<div class="grid-containerFamily">
+					<div class="mity">
+						<!--<center> -->
+							<h2 style="margin-top:5%" onclick="toggle_visibility('lista_mitow')">Najpopularniejsze mity o wychowaniu dzieci dwujęzycznych</h2>
+							<ol class="list" id='lista_mitow'>
+								<li class="item">
+									<h1 class="headline" onclick="toggle_visibility('mit1')">Dwujęzyczność jest powodem zaburzenia rozwoju mowy u dzieci.</h1>
+									<span id="mit1">Nie jest to prawda. Świadczą o tym liczne badania z zakresu psychologii rozwojowej. Gdyby pojawiło się podobne zaburzenie, to występowało by ono w obu językach, którymi się posługuje dziecko.</span>
+								</li>
+								<li class="item">
+									<h2 class="headline" onclick="toggle_visibility('mit2')">Bycie dwujęzyczynym spowoduje, że dziecko zacznie się mylić.</h2>
+									<span id="mit2"> 
+										Prawdą jest to, że dzieci dwujęzyczne często mieszają reguły gramatyczne. Nie znaczy to wcale, że są w zamieszanie. To, że używają słów z różnych języków w jednym zdaniu także jest normalnym zjawiskiem rozwojowym. 
+
+										Około czwartego roku życia dziecko zaczyna uświadamiać sobie, że dwa języki, którymi się posługuje są odrębne os siebie. Ewentualnie zaczyna się też uczyć poprawnego odddzielania od siebie języków.
+									</span>
+								</li>	
+								<li class="item"><h1 class="headline" onclick="toggle_visibility('mit3')">Dzieci dwujęzyczne są mniej inteligentne od monojęzycznych.</h1>
+									<span id="mit3">Nie ma to ze sobą żadnego powiązania. Nie są w niczym gorsi albo lepsi od swoich monoligualnych kolegów. Natomiast badania wykazują, że dzieci te mają nieco większą przewagę poznawczą w niektórych dziedzinach. Jakich? Na przykład, w kontroli uwagowej i elastyczności poznawczej.
+									</span>
+								</li>
+								<li class="item">
+									<h1 class="headline" onclick="toggle_visibility('mit4')">Dzieci dwujęzyczne w pierwszych latach życia używają tzw. „mieszanki” i końcu nie umieją żadnego z języków na wysokim poziomie</h1>
+									<span id="mit4">Z licznych badań wynika, że dzieci dość wcześnie zaczynają być świadomi różnic między dwoma językami. Ponadto, każdy z tych języków rozwija się w miarę niezależnie od siebie w swoim własnym tempie i zakresie. Każde dziecko przy odpowiednim wsparciu i aktywnym nabywaniu każdego z języków ma szansę na zaawansowane posługiwanie się nimi.
+									</span>
+								</li>
+								<li class="item"><h1 class="headline" onclick="toggle_visibility('mit5')">Dwujęzyczność jest obciążeniem, które spowalnia poznawczy rozwój dziecka</h1>
+									<span id="mit5">Badacze sugerują, że monojęzyczność nie jest żadną biologiczną normą. Ponadto, z obserwacji naukowców wynika, że nasz mózg łatwo się dostosowuje do bycia dwujęzycznym. Dzieci dwujęzyczne napotykają te same kamienie milowe co i jednojęzyczne i pokonanie ich nie jest uzależnione od ilości używanych języków.</span>
+								</li>
+							</ol>
+					</div>
+					<div class="pytania">
+						<h2 onclick="toggle_visibility('lista_pytan')">Najbardziej nurtujące pytania</h2>
+							<ol class="list" id="lista_pytan">
+								<li class="item">
+									<h2 class="headline" onclick="toggle_visibility('pytanie1')">Jakie są najważniejsze czynniki w wychowaniu dwujęzycznego dziecka?</h2>
+									<span id="pytanie1">
+											Warto wspomnieć o takich ważnych faktorach jak:
+											<ul style="text-align: left; list-style-type: disc;">
+												<li>Dbanie o jakość komunikacji i samoidentyfikacji dziecka zamiast np. dokładnej poprawności gramatycznej</li>
+												<li>Potraktowanie nabywania drugiego języka jako przygody, a nie coś skojarzone z presją, lękiem i ciągłym poprawianiem</li>
+												<li>Ciągła zachęta i chwalenie dziecka</li>
+												<li>Adekwatne, czyli w miarę równomierne, wystawienie na obydwa języki</li>
+												<li>Stworzenie różnorodnych  środowisk językowych, przyjaznych dla rozwoju językowego</li>
+											</ul>
+									</span>
+								<li class="item">
+									<h2 class="headline" onclick="toggle_visibility('pytanie2')">Czy lepiej jest uczyć się dwóch języków naraz czy po kolei?</h2>
+									<span id="pytanie2">
+										Bardzo ważna kwestia, która zastanawia wielu rodziców. Z jednej strony, wiemy, że sukces w dwujęzyczności nie zależy do wieku. Z drugiej, jeśli na to pozwalają warunki domowe, zacząć warto raczej wcześniej, niż później. Zdarzają się sytuacje, kiedy najpierw następuje porządne nauczenie się jednego z języków, a potem zaczyna się nauka drugiego. Kiedy jeden z języków dominuje w państwie zamieszkania, warto się skupić na rozwoju drugiego. Dlaczego? Kiedy dziecko zaczyna się aktywnie socjalizować, dominujący język jest nabywany bardzo szybko.
+									</span>
+								</li>
+								<li class="item">
+									<h2 class="headline" onclick="toggle_visibility('pytanie3')">Czy rola matki jest ważniejsza od roli ojca w rozwoju językowym dziecka</h2>
+									<span id="pytanie3">
+										Obydwaj rodzice są bardzo ważni w rozwoju językowym dziecka. Opinia drugiego rodzica na temat posługiwania się językiem pierwszego może mocno wpłynąć na dalsze decyzje i preferencje dziecka. Czasami wprowadzenie drugiego języka do środowiska dziecka wymaga dalszego planowania (patrz: language planning). Rodzice także wspólnie decydują o tym, w którym języku rozmawiają ze sobą. Nawet nie biorąc czynnego udziału w rozmowie, dziecko nabywa wiedzy i zainteresowania danym językiem.
+									</span>
+								</li>
+								<li class="item">
+									<h2 class="headline" onclick="toggle_visibility('pytanie4')">Mój partner nie zgadza się na wychowanie dziecka jako dwujęzycznego</h2>
+									<span id="pytanie4">
+										Ważne jest rozpatrywanie nabywania drugiego języka jako część ogólnego rozwoju dziecka. Warto rozpatrzeć także wszystkie plusy i minusy tego procesu, pamiętając o byciu otwartym i empatycznym. Zamiast atakowania poglądów partnera, zalecane jest rozpatrzenie sytuacji z kilku różnych perspektyw. Oczywiście, przede wszystkim trzeba wziąć pod uwagę potrzeby i dobrostan dziecka.
+									</span>
+								</li>
+								<li class="item">
+									<h2 class="headline" onclick="toggle_visibility('pytanie5')">Partner nie rozumie języka, w którym rozmawiam z dzieckiem. Czy to może stanowić problem?</h2>
+									<span id="pytanie5">
+										Dyskusja i dochodzenie do kompromisów jeszcze przed urodzeniem dziecka ma tutaj jedno z kluczowych znaczeń. Według badań, większość par nie ma z tym problemów, a nawet więcej, partner się uczy języka równolegle z dzieckiem. Czasami jednak drugi rodzic czuje się wykluczony, a nawet zazdrosny „tajemnego języka” używanego pomiędzy najbliższego. Może on się poczuć bezradny i nie mający wpływu i kontroli. Zabrzmi to banalnie, ale odpowiedź jest w negocjacjowaniu, dyskusjach i dużej dozie wyrozumiałości dla tego rodzica.
+									</span>
+								</li>
+								<li class="item">
+									<h2 class="headline" onclick="toggle_visibility('pytanie6')">Czy jeśli mój drugi język nie jest perfekcyjny, mogę mówić z dzieckiem w tym języku?</h2>
+									<span id="pytanie6">
+										Trudno jednoznacznie dać odpowiedź na to pytanie. Zależy to od tego, na ile dobrze się posługujecie drugim językiem. Jeśli jego znajomość jest naprawdę słaba, to nie warto rozmawiać w nim z dzieckiem. Natomiast wciąż wchodzi w grę uczenie się drugiego języka razem z dzieckiem – szczególnie, wtedy kiedy dziecko jest jeszcze małe i struktury językowe, którymi się posługuje są relatywnie proste.
+									</span>
+								</li>
+								<li class="item">
+									<h2 class="headline" onclick="toggle_visibility('pytanie7')">Czy powinno moje dziecko oddzielać jeden język od drugiego w zależności od osoby i sytuacji?</h2>
+									<span id="pytanie7">
+										Ciekawa wydaje się kwestia granic językowych i rozdzielenie kontekstów użycia przez dziecko każdego z języków. Pomaga to dzieciom, na przykład, rozpoznać w którym języku zwracać się do rozmówcy. Według badaczy, taki podział spowoduje, że rozwój językowy będzie bardziej efektywny.
+									</span>
+								</li>
+								<li class="item">
+									<h2 class="headline" onclick="toggle_visibility('pytanie8')">Czemu dziecko czasami odmawia używania jednego z języków?</h2>
+									<span id="pytanie8">
+										Subiektywnie odczuwany status i prestiż języka gra ważną rolę w akceptacji danego języka mniejszości. Język dominujący w danym kraju także może być odrzucany przez aktywistów, broniących języków mniejszości. Czasami to odrzucanie jest tymczasowe. Może ono być związane z tym, że dziecko chce wypaść lepiej w określonej grupie albo chce pokazać swoją odrębność i niezależność w trakcie budowania własnej tożsamości. 
+									</span>
+								</li>
+								<li class="item">
+									<h2 class="headline" onclick="toggle_visibility('pytanie9')">Jakie są  możliwe wady bycia dwujęzycznym dzieckiem?</h2>
+									<span id="pytanie9">
+										Oto kilka potencjalnych problemów:
+										<ul style="text-align: left; list-style-type: disc;">
+											<li>Obydwa języki pozostaną niedorozwinięte. Głównym przejawem tego będzie fakt, że dziecko nie daje sobie ze szkolnym programem w żadnym ze swoich języków. Zdarza się to rzadko, ale starać się unikać tego zjawiska</li>
+											<li>Ilość wysiłku włożonego przez rodziców w rozwój dwujęzycznego dziecka. Nie zawsze jest to wychowanie proste i często wymaga dozy namysłu i kreatywności</li>
+											<li>Tożsamość dziecka (patrz: <a href="#12">pytanie 12</a>)</li>
+										</ul>
+									</span>
+								</li>
+								<li class="item">
+									<h2 class="headline" onclick="toggle_visibility('pytanie10')">Jak sztuka i współczesne technologie wpływają na dwujęzyczność dziecka?</h2>
+									<span id="pytanie10">
+										Nabywanie języka poprzez udział w aktywnościach jest niezwykle efektywne. Podczas śpiewanie piosenek, odgrywanie scenek itp. dziecko nawet nie zauważa procesu uczenia się, który przebiega w sposób przyjemny i zabawny. 
+										Zjawisko, które łatwo możemy dostrzec, to dominacja języka angielskiego we współczesnych technologiach. Z tego powodu, ważne jest żeby chociażby część aktywności dziecka była poza środowiskiem przeważnie angielskojęzycznym.
+									</span>
+								</li>
+								<li class="item">
+									<h2 class="headline" onclick="toggle_visibility('pytanie11')">Czy bycie dwujęzycznym wpłynie na relacje społeczne dziecka?</h2>
+									<span id="pytanie11">
+										Najczęściej, dwujęzyczność jest raczej atutem w przypadku budowania relacji społecznych. Natomiast problem może się pojawić, gdy grupa dzieci posługujących się dominującym językiem postawie się w opozycji do dziecka mówiącego językiem mniejszości. Tutaj opiekun powinien zachować delikatny bilans pomiędzy obroną dziecka i pomocą w tranzycji do tej grupy. Przegięcia zarówno w jedną jak i drugą stroną warto unikać. Rola rodzica jest bycie przyjacielem, uważnym słuchaczem, generatorem możliwości i czasami obrońcy. W przypadkach skrajnych zawsze można ubiegać się o pomoc pedagoga i rodziców dzieci o podobnych problemach.
+									</span>
+								</li>
+								<li class="item">
+									<h2 class="headline" id="12" onclick="toggle_visibility('pytanie12')">Czy dziecko dwujęzyczne będzie miało problem z ustaleniem własnej tożsamości?</h2>
+									<span id="pytanie12">
+										Kluczem do sukcesu jest zachowania konstruktywności i próby uniknięcia kryzysu tożsamościowego na tle kulturowym. Niestety, nie ma jednoznacznie dobrej odpowiedzi na to pytanie. Nie możemy też zaproponować uniwersalnego rozwiązania tego kryzysu. Jednak jest kilka rzeczy, które możemy zrobić:
+										<ul style="text-align: left; list-style-type: disc;">
+											<li>Wystawić dziecko na różne sytuacje, w których będzie odgrywać różne role społeczne. W taki sposób nabędzie ono różnorakich doświadczeń i doświadczy różnych perspektyw</li>
+											<li>W Przypadku imigracji warto się zastanowić sposobem nad integracji w nową społeczność, nie zapominając o swoich korzeniach – ważna tutaj także będzie rola szkoły </li> 
+										</ul>
+									</span>
+								</li>
+								<li class="item">
+									<h2 class="headline" onclick="toggle_visibility('pytanie13')">Jak pomóc mojemu dziecku z przynależnością do dwóch kultur?</h2>
+									<span id="pytanie13">
+										W ciągu dorastania, dzieci najczęściej samodzielnie wybierają kulturę, którą będą zgłębiały. Co może zrobić rodzic to pokazać dziecku ciekawość i różnorodność obydwu kultur. W jaki sposób? Na przykład, poprzez spotkania z innymi nosicielami danego języka albo biorąc udział w wydarzeniach kulturowych. W przypadku, gdy doświadczenia z pierwszej ręki nie są możliwe, na pomoc przychodzą media. Naszym celem jest poszerzyć horyzonty dziecka i przedstawić mu więcej możliwości do wyboru.
+									</span>
+								</li>
+								<li class="item">
+									<h2 class="headline" onclick="toggle_visibility('pytanie14')">Czy jest skuteczne tzw. podejście One-Person-One-Language(OPOL, pl. Jedna-osoba-jeden-język)?</h2>
+									<span id="pytanie14">
+										Wielu autorów uważa takie podejście, jeśli jest stosowane wystarczająco konsekwentnie i ciągle za efektywne. Tutaj jednak muszę uprzedzić o niektórych ukrytych pułapkach tego podejścia:
+										<ul style="text-align: left; list-style-type: disc;">
+											<li>Dziecko raczej nie będzie miało dwóch „zbilansowanych” języków. Spowodowane to jest tym, że tak naprawdę wkład rodzinny nigdy nie będzie perfekcyjnie równy w obu językach</li>
+											<li>Znane są przypadki, kiedy dziecko (nastolatek, młody dorosły) utrzymuje, owszem, wiedzę obu języków na odpowiednim poziomie, natomiast jeden z nich staje się bardziej pasywny. Ponadto, nie wszystkie dzieci wychowywane tą metodą rzeczywiście stają się dwujęzyczne w pełnym znaczeniu tego słowa</li>
+											<li>Poza rodziną jest bardzo dużo czynników wpływających na rozwój językowy dziecka. Przykładem mogą służyć nauczyciele, rówieśnicy, mass media. Wpływają one także na rozwój tożsamości, wysokość samooceny i samoidentyfikację dziecka. To z kolei może wpłynąć dodatkowo na poziom rozwoju danego języka i częstość jego użytkowania</li>
+											<li>Takie faktory, jak ciągłe monitorowanie, poszukiwanie bilansu językowego i ciągłe martwienie się o sukces mogą być męczące dla rodziców, stosujących OPOL</li>
+										</ul>
+									
+									</span>
+								</li>
+								
+							</ol>
+					</div>		
+				</div>
+			</div>
+		</div>
+		<div id="edukacja" class="spacertop"></div>
+		<div class="content" id="edukacja1">
+			<div class="container">
+				<h1>Szkoła i edukacja</h1>
+				<p style="font-size: 22px;">Nauka pisma i czytania jest bardzo ważna dla wszystkich uczniów.
+				Jednak dzieci dwujęzyczne z powodów oczywistych mogą mieć z tym trudności. 
+				Jak zachęcić takich uczniów do nauki? Jak zainspirować tych, którzy się wstydzą albo czują się nieswojo? 
+				Poniżej znajdziesz kilka proponowanych kreatywnych podejść skupionych na piśmie lub czytaniu. Kliknij na nazwę kategorię by je poznać!
+				<h2  style="margin: auto; margin-bottom: 2%;" onclick="toggle_visibility1('podejsciaPismo')">Podejścia skupione na piśmie</h2>
+				<div class="grid-container" id="podejsciaPismo">
+					<div class="rysowanie">
+						<div class="flipCard"> 
+							<div class="card" onclick="this.classList.toggle('flipped');"> 
+								<div class="side front">Rysowanie</div>
+								<div class="side back">
+									<p>Rysowanie jest prostym sposobem na zobrazowanie swoich pomysłów bez potrzeby walki z tłumaczeniem słów na inny język. 
+									<p><br>Dane zadanie polega na zadaniu określonego tematu, a potem narysowaniu w albumie historyjki na ten temat. 
+									Nauczyciel dokłada nagłówków do każdej strony (albo pozwala uczniom napisać je samodzielnie). 
+									<p><br>Historyjki są czytane na głos do całej klasy. Jest to metoda lubiana nawet przez starszych uczniów, i pomogła niejednemu z nich przełamać barierę językową!
+								</div> 
+							</div>
+						
+						</div>
+					</div>
+				    <div class="skrzynka">
+						<div class="flipCard"> 
+							<div class="card" onclick="this.classList.toggle('flipped');"> 
+								<div class="side front">Gra w skrzynkę pocztową</div>
+								<div class="side back">
+									<p>W tej grze spełnia się naturalna chęć dzieci do przekazywania sobie zapisek podczas lekcji a jednocześnie poprawia się nauka pisania. 
+									<p>Nauczyciel wybiera temat, którym, na przykład, jest przeczytana przez dzieci książka. Dalej wszystko jest proste – listy są wkładane do skrzynki i roznoszone przez naznaczonego „listonosza” do wszystkich. 
+									<p>Ważne jest, żeby nauczyciel nie poprawiał na tym etapie gry pisowni!
+									Natomiast w przypadku, gdy uczeń prosi o pomoc w napisaniu ma jej udzielić albo zabezpieczyć wychowanka na przykład słownikiem.
+								</div> 
+							</div>
+						</div>
+				    </div>
+					<div class="dzienniczek">
+						<div class="flipCard"> 
+							<div class="card"  onclick="this.classList.toggle('flipped');"> 
+								<div class="side front">Dzienniczek dialogowy</div>
+								<div class="side back">
+									Dzienniczek jest prowadzony przez ucznia i jest formą komunikacji między nim a nauczycielem. Nie narzucamy tematyki wypowiedzi! Zachęcamy uczniów do pisania o tym, co jest dla nich naprawdę ważne.
+									Nie zalecane jest jednak poprawianie wypowiedzi uczniów, natomiast odpowiadając można użyć poprawnej formy.
+								</div> 
+							</div>
+						</div>
+				    </div>
+				    <div class="retoryczne">
+						<div class="flipCard"> 
+							<div class="card" onclick="this.classList.toggle('flipped');"> 
+								<div class="side front">Podejście retoryczne</div>
+								<div class="side back">
+									<p>Metoda pomocna zarówno dla uczniów jak i dla nauczycieli. W jaki sposób? 
+									Pedagodzy odkrywają, z którym aspektem pisma wychowankowie mają problem.
+									<br><p>Podejście to można określić jako „od ogółu do szczegółu”.
+									Zaczynamy od bardzo szerokiego tematu i na razie nie sprawdzamy pisemnych wypowiedzi wychowanków. Kontynuujemy z celem wypowiedzi, zawężeniem audytorium i tematyki. Potem zastanawiamy się nad gatunkiem i sposobem organizacji wypowiedzi. Wersja inicjalna może być zrewidowana w grupie, zarówno jak techniczne aspekty wypowiedzi, takie jak ortografia, interpunkcja itd. 
+									<br><p>W przypadku dobrze wykonanej pracy warto zachęcić uczniów publikując ich prace na przykład w szkolnej gazecie.
+								</div> 
+							</div>
+						</div>
+				    </div>
+				</div>
+				<h2 style="margin: auto; margin-bottom: 2%;" onclick="toggle_visibility1('podejsciaCzytanie')">Podejścia skupione na czytaniu</h2>
+				<div class="grid-container" id="podejsciaCzytanie">
+					<div class="fiszki">
+						<div class="flipCard"> 
+							<div class="card" onclick="this.classList.toggle('flipped');"> 
+								<div class="side front">Fiszki słowne</div>
+								<div class="side back">
+									<p>Przydadzą się karteczki, na których każdy dzień zapiszesz nowe słowo. Ważne, żeby to robić razem z uczniami – wymawiając słowo na głos i demonstrując pisownię. 
+									<br><p>Uczniowie też zaznajmiają się z fiszkami, które potem są przechowywane w specjalnej skrzynce lub każdy z wychowanków ma swoją kopertę na własne fiszki. 
+									Każdego dnia uczniowie przypominają sobie nowe słowa, czytają je na głos kolegom i wyjaśniają ich znaczenie.
+									<br><p>W przypadku nagromadzenia dużej ilości karteczek można zaangażować uczniów w jaką tematyczną zabawę  - rysowanie, odgrywanie scenek itd.
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="wspolne_czytanie">
+						<div class="flipCard"> 
+							<div class="card" onclick="this.classList.toggle('flipped');"> 
+								<div class="side front">Wspólne czytanie</div>
+								<div class="side back">
+									<p>Podejście to angażuje naukę czytania poprzez modelowanie. Przyda się mieć w zapleczu proste historyjki, wiersze albo piosenki z powtarzającym się motywem. Materiał zależy od wieku wychowanków i od wielkości danej grupy. 
+									<br><p>Podczas czytania zalecane jest używanie dużej książki lub ekranu, wskazując na miejsce, które jest czytane w danym momencie.
+									Dane teksty można też używać jako podstawę do różnorakich ćwiczeń.
+								</div>
+							</div>
+						</div>				
+					</div>
+					<div class="polaczenia">
+						<div class="flipCard"> 
+							<div class="card" onclick="this.classList.toggle('flipped');"> 
+								<div class="side front">Połączenia słownikowe</div>
+								<div class="side back">
+									<p>Na początku musisz wybrać sekcję lub akapit z literatury. Następnym krokiem jest wybranie kilku kluczowych do zrozumienia słów, które potem uczniowie mogą wyszukać w słowniku. 
+									<br><p>Omawiając definicje i tworząc przykłady, dzieci nabywają tych słów. 
+									Następnie zachęcamy je do przeczytania początkowego fragmentu i przekazania jego własnymi słowami.
+								</div>
+							</div>
+						</div>				
+					</div>
+					<div class="literatura_odzew">
+						<div class="flipCard"> 
+							<div class="card" onclick="this.classList.toggle('flipped');"> 
+								<div class="side front">Reakcje na literaturę</div>
+									<div class="side back">
+										<p>Celem tego podejścia jest skłonienie uczniów do zastanowienia się nad tym, co przeczytali, do refleksji i odniesienia tego do własnych doświadczeń i wiedzy. 
+										<br><p>W przypadku tej metody można naprawdę popuścić wodzy fantazji. Wchodzą w grę różnego rodzaju dzienniczki, listy do bohaterów, pomysły nad kontynuacją fabuły, ale także zwykłe reakcję na określone sekcje książki. 			
+									</div>
+							</div>
+						</div>				
+					</div>
+				</div>
+				<h2 style="text-align: left; margin: 3%;">Często zadawane pytania</h2>
+				
+					<ul class="list">
+						<li class="item">
+							<h4 onclick="toggle_visibility('pytanie_edu1')">Na co powinniśmy zwrócić uwagę wybierając szkołę dla dwujęzycznego dziecka?</h4>
+							<span id="pytanie_edu1">
+								Jeśli szkoła jest znana jako szkoła dwujęzyczna lub jako szkoła jednojęzyczna wspierająca dwujęzyczność, ważne jest, aby zwrócić uwagę na faktyczne użycie obu języków w programie nauczania. Dobra szkoła dwujęzyczna będzie miała szczegółową politykę dotyczącą rozwoju języków obcych w szkole oraz politykę dotyczącą czytania i pisania w dwu językach.
+								Wartościowe placówki także nie będą zainteresowane rozgrywkami społeczno-politycznymi i prestiżem, natomiast ich najwyższym priorytetem będą dzieci. 
+							</span>
+						</li>
+						<li class="item">
+							<h4 onclick="toggle_visibility('pytanie_edu2')">Czy istnieje "wiek krytyczny", po którym dzieci nie powinny być przenoszone do szkoły, w której program szkolny jest w innym języku?</h4>
+							<span id="pytanie_edu2">
+								Nie zapominajmy, że dzieci różnią się między sobą pod względem zdolności adaptacji do nowego środowiska językowego, a także pod względem nastawienia i motywacji do przyswajania języka. Jednak możemy mówić o określonych cechach wspólnych. Do siódmego roku życia raczej nie ma problemu z szybkim przystosowaniem się dzieci do nowego środowiska językowego w szkole. Język używany w klasie w tym okresie jest zazwyczaj stosunkowo prosty, a także dość szybko nabywany. W wieku od siedmiu do jedenastu lub dwunastu lat dzieci potrzebują wsparcia w klasie i poza nią. W miarę jak przedmioty szkolne są zgłębiane, idee i koncepcje stają się bardziej złożone. Odpowiednio poziom języka dziecka musi być bardziej zaawansowany. Podsumowując, po jednym lub dwóch latach nauki w szkole ponadpostawowej używanie nowego języka w programie nauczania będzie dość trudne.
+								Na tym etapie rodzice mogą rozważyć alternatywne opcje.
+							</span>
+						</li>
+						<li class="item">
+							<h4 onclick="toggle_visibility('pytanie_edu3')">Jakie są pozytywne strony edukacji za pośrednictwem dwóch języków?</h4>
+							<span id="pytanie_edu3">
+								Warto wymienić między innymi takie możliwe pozytywne skutki:
+								<ul style="list-style-type:disc;">
+									<li>Zwiększenie szans na zatrudnienie, kulturowy biliteralizm i zdolność do funkcjonowania w dwóch grupach językowych i dwóch kulturach językowych</li>
+									<li>Większa wrażliwość na różnorodność językową i etniczną w świecie, szerszy światopogląd i więcej kulturowych ról i zrozumienia kultury</li>
+									<li>Niewielka przewaga w osiągnięciach szkolnych - te dzieci, które mogą pracować w obu językach w ramach programu nauczania, często wykazują nieznacznie lepsze wyniki w nauce</li>
+								</ul>
+							</span>
+						</li>
+						<li class="item">
+							<h4 onclick="toggle_visibility('pytanie_edu4')">Czy moje dwujęzyczne dziecko potrzebuje edukacji specjalnej?</h4>
+							<span id="pytanie_edu4">
+								Dzieci, potrzebujące specjalnej opieki w tym zakresie możemy podzielić na dwie podgrupy. Pierwsza obejmuje tych, którzy są dwujęzyczni i mają trudności fizyczne, neurologiczne, związane z uczeniem się, emocjonalne, poznawcze lub behawioralne. Większość z tych dzieci odniesie znacznie większe korzyści z dwujęzycznej edukacji specjalnej, a nie z jednojęzycznej. 
+								Dla innych dzieci specjalnej troski korzyści płynące z dwujęzycznej edukacji specjalnej są liczne. Jednym z przykładów może być dziecko imigrantów, dziecko o specjalnych potrzebach edukacyjnych. Umieszczenie takiego dziecka w klasie, języka której nie umie (np. angielskiego w Stanach Zjednoczonych) spowoduje jedynie wzrost niepowodzeń i obniżenie poczucia własnej wartości. 
+								Aby dziecko mogło się kształcić, najlepiej, aby na początku nauczanie odbywało się głównie w języku ojczystym, z szansą zostania dwujęzycznym. Badania wykazują, że większość dzieci o specjalnych potrzebach edukacyjnych jest w stanie rozwijać się w dwóch językach.
+								Warto jednak pamiętać o tym, że  nie wystarczy jednak umieszczenie dziecka w szkole określonego typu. Niezbędne jest opracowanie skutecznych strategii nauczania i odpowiedniego program. Podobnie jest z potrzebą szkolenia nauczycieli dla uczniów dwujęzycznych objętych kształceniem specjalnym.
+
+							</span>
+						</li>
+					</ul>
+				
+			</div>
+		</div>
+		<div id="dodatkowe" class="spacertop"></div>
+		<div class="content" id="dodatkowe1">
+			<div class="container">
+				<h1>Dodatkowe</h1>
+				<h2>Aplikacje wielojęzyczne</h2>
+				
+				<h3>Top 5 aplikacji nauki języka, odpowiednich dla dzieci</h3>
+				<ul class="list">
+					<li class="item">
+						<h4 style="font-size: 2rem;">Gus on the Go!</h4>
+						<img src="static/images/gusGame.png" style="height: 200px; weidth: 200px;">
+						<div class="game">
+							<h5>Dostępny dla
+							<img src="static/images/googlePlay.jpg" style="height: 50px; weidth: 50px;">
+							<img src="static/images/appStore.jpg" style="height: 50px; weidth: 50px;">
+							</h5>
+							<h5>Cena: 3,99$ za jedno pobranie</h5>
+							<h5>
+							<a href="https://www.gusonthego.com/">Strona internetowa</a></h5>
+							<h5>Dlaczego warto?</h5>
+							<ul style="list-style-type:disc; font-size: 2rem">
+								<li>
+									10 interaktywnych lekcji z zabawnym bohaterem – sową Gusem
+								</li>
+								<li>
+									Głos udzielony przez rodzimych użytkowników 30 języków
+								</li>
+								<li>
+									Dobrej jakości animacja
+								</li>
+								<li>
+									Poprawne wykonanie zadań odblokowuje nagrody w postaci gier
+								</li>				
+							</ul>
+						</div>
+					</li>
+					<li class="item">
+						<h4 style="font-size: 2rem;">Teach Kids Languages</h4>
+						<img src="static/images/teachKids.png" style="height: 200px; weidth: 200px;">
+						<div class="game">
+							<h5>Dostępny dla
+								<a href="https://play.google.com/store/apps/details?id=com.tkl.app&referrer=utm_source%3Dwebsite_en%26utm_medium%3Dwebsite"><img src="static/images/googlePlay.jpg" style="height: 50px; weidth: 50px;"></a>
+								<a href="https://apps.apple.com/app/learn-languages-with-amy/id1495559011"><img src="static/images/appStore.jpg" style="height: 50px; weidth: 50px;"></a>
+							</h5>
+							<h5>Cena: wersja darmowa z ograniczeniem treści</h5>
+							<h5><a href="https://www.teachkidslanguages.com/">Strona internetowa</a>
+							</h5>
+							<h5>Dlaczego warto?</h5>
+								<ul style="list-style-type:disc; font-size: 2rem;">
+									<li>
+										Pasuje dla małych dzieci od 2 do 7 lat
+									</li>
+									<li>
+										Przystępne metody nauki - puzzle, gry, quizy
+									</li>
+									<li>
+										Koncentracja na nauce wymowy i pisma podstawowych słów
+									</li>
+									<li>
+										Języki: angielski, hiszpański, polski, holenderski, esperanto
+									</li>				
+								</ul>
+								
+							
+						</div>
+					</li>
+					<li class="item">
+						<h4 style="font-size: 2rem;">FluentU</h4>
+						<img src="static/images/fluentu.jpg" style="height: 200px; weidth: 200px;">
+						<div class="game">
+							<h5>Dostępny dla
+								<a href="https://play.google.com/store/apps/details?id=com.fluentflix.fluentu"><img src="static/images/googlePlay.jpg" style="height: 50px; weidth: 50px;"></a>
+								<a href="https://apps.apple.com/app/id917892175"><img src="static/images/appStore.jpg" style="height: 50px; weidth: 50px;"></a>
+							</h5>
+							<h5>Cena: 14 dni za darmo, potem według <a href="https://www.fluentu.com/pricing/">tabeli cen</a></h5>
+							<h5><a href="https://www.fluentu.com/ ">Strona internetowa</a>
+							</h5>
+							<h5>Dlaczego warto?</h5>
+								<ul style="list-style-type:disc; font-size: 2rem;">
+									<li>
+										Używa filmików, które możesz sobie wybrać sam i robi z nich lekcje
+									</li>
+									<li>
+										Dostęp do każdego użytego słowa, jego definicji, obrazku, przykładowych zdań
+									</li>
+									<li>
+										Dobór filmików z użyciem tego słowa w innych kontekstach
+									</li>
+								</ul>
+					</li>
+					<li class="item">
+						<h4 style="font-size: 2rem;">Duolingo</h4>
+						<img src="static/images/duolingo.png" style="height: 200px; weidth: 200px;">
+						<div class="game">
+							<h5>Dostępny dla
+								<a href="https://play.google.com/store/apps/details?hl=en&id=com.duolingo"><img src="static/images/googlePlay.jpg" style="height: 50px; weidth: 50px;"></a>
+								<a href="https://apps.apple.com/us/app/duolingo-language-lessons/id570060128"><img src="static/images/appStore.jpg" style="height: 50px; weidth: 50px;"></a>
+							</h5>
+							<h5>Cena: darmowe z reklamami, płatne bez reklam </h5>
+							<h5><a href="https://www.duolingo.com/">Strona internetowa</a>
+							</h5>
+							<h5>Dlaczego warto?</h5>
+								<ul style="list-style-type:disc; font-size: 2rem;">
+									<li>
+										Podział na intuicyjne bloki z różnego typu zadaniami
+									</li>
+									<li>
+										Zarabianie punktów za dobrze wykonane zadania
+									</li>
+									<li>
+										Interaktywna grafika
+									</li>
+									<li>
+										Duży wybór języków do nauki
+									</li>
+								</ul>
+					</li>
+					<li class="item">
+						<h4 style="font-size: 2rem;">Little Pim</h4>
+						<img src="static/images/littlePim.png" style="height: 200px; weidth: 200px;">
+						
+						<div class="game">
+							<h5>Dostępny dla
+								<a href="https://play.google.com/store/apps/details?id=com.littlepim.videoplayer&gl=PL"><img src="static/images/googlePlay.jpg" style="height: 50px; weidth: 50px;"></a>
+								<a href="https://apps.apple.com/us/app/little-pim-video/id1492323426"><img src="static/images/appStore.jpg" style="height: 50px; weidth: 50px;"></a>
+							</h5>
+							<h5>Cena: darmowa wersja próbna, potem 9.99$ na miesiąc </h5>
+							<h5><a href="https://www.littlepim.com/">Strona internetowa</a>
+							</h5>
+							<h5>Dlaczego warto?</h5>
+								<ul style="list-style-type:disc; font-size: 2rem;">
+								    <li>
+										Dopasowane do dzieci w wieku od 1 do 5
+									</li>
+									<li>
+										Krótkie filmiki edukacyjne
+									</li>
+									<li>
+										Główny bohater – panda Mały Pim, udzielali mu głosu rodzimi użytkownicy 12 różnych języków
+									</li>
+									<li>
+										360 słów podstawowego słownictwa
+									</li>
+									<li>
+										Duży wybór języków do nauki
+									</li>
+								</ul>
+						</div>
+					</li>
+				</ul>							
+						
+					</li>
+				</ul>
+				<h2>Autorskie gry dwujęzyczne w trybie online</h2>
+				<p style="font-size: 22px;">Każda gra może stać się specjalna, kiedy gracie w kilku językach naraz! W tej sekcji poznasz dwie przykładowe gry, w które możesz zagrać ze 
+				swoim dzieckiem jednocześnie rozwijając jego zdolności językowe.</p>
+				<ul id="lista_gier">
+					<li style="display: inline;">
+					  <button style="background-image: url('static/images/memory/memory_glowna.jpg'); background-size: 400px 300px; width: 300px; height: 300px;">
+						<a style="background-color: white; border-style: solid;" href="{{url_for('gra_memory')}}">Dwujęzyczne memory</a>
+					 </button>
+					</button>
+					</li>
+					<li style="display: inline; margin: 2%;">
+					    <button style="background-image: url('static/images/wyspa/wyspa_glowna.jpg'); background-size: 300px 300px; width: 300px; height: 300px;">
+						<a style="background-color: white; border-style: solid;" href="{{url_for('gra_samotna_wyspa')}}">Dwujęzyczna Samotna Wyspa</a>
+						</button>
+					</li>
+				</ul>
+			<center>
+			<h2>Warte obejrzenia filmiki na Youtube</h2>
+			
+<iframe width="560" height="315" src="https://www.youtube.com/embed/lrsiP9m49qo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+			</center>
+			</div>
+		</div>
+		<div id="personalexp" class="spacertop"></div>
+		<div id="personalexp1" class="content">
+			<div class="container">
+				<h1 style="margin-top: 3%;">&bull; Podziel się swoją historią! &bull;</h1>
+				<div class="underline">
+				</div>
+				<center>
+				<div class="icon_wrapper">
+					<img style="height: 200px; margin: 0;" src="static/images/opinion.svg#svgView(viewBox(70,10,10,390))">
+				</div>
+				</center>
+				<form action="{{url_for('add_comment')}}" method="post" id="contact_form">
+					<div class="name">
+						<label for="name"></label>
+						<input type="text" placeholder="Wpisz imię lub pseudonim" name="name" id="name_input">
+					</div>
+					<div class="email">
+						<label for="email"></label>
+						<input type="email" placeholder="Wpisz adres e-mail" name="email" id="email_input">
+					</div>
+					<div class="subject">
+						<label for="subject"></label>
+						<input type="text" placeholder="Dodaj temat" name="subject" id="subject_input">
+					</div>				
+					<div class="message">
+						<label for="message"></label>
+						<textarea name="message" placeholder="Opisz swoje doświadczenia" id="message_input" cols="30" rows="5"></textarea>
+						</div>
+					<div class="submit">
+						<input type="submit" value="Prześlij" id="form_button" name="comment" />
+					</div>
+				</form>
+				<h2>Dodane doświadczenia</h2>
+
+<!--{% if comments is not none%}-->
+{% for comment in comments %}
+					
+					<table id="comments">
+						<tr class="comment_elem">
+							
+								<th colspan="2" style="width:100%">
+								Temat: {{comment.temat}}	
+								
+								</th>		
+						
+						</tr>
+
+						<tr class="comment_elem">
+							<td class="comment_elem" style="width: 20%;">
+								<p><strong>Autor:</strong> {{ comment.pseudonim}}
+								<p><strong>Adres email:</strong> {{comment.email}}
+								
+							</td>
+							
+							<td class="comment_elem" style="width: 55%;">
+								{{comment. komentarz}}
+							</td>
+						</tr>
+					</table>
+				    
+  {% endfor %}	
+<!--{% endif %} --> 				
+<script>
+var myLine = new LeaderLine(
+    document.getElementById('start'),
+    document.getElementById('end'),
+	{ path: 'straight', startSocket: 'bottom', endSocket: 'top', endPlug: 'behind', endPlugSize: 0.5, color: 'white', size: 3, dash: true,}
+	);
+var myLine = new LeaderLine(
+    document.getElementById('start'),
+    document.getElementById('destination4'),
+	{ path: 'straight', startSocket: 'bottom', endSocket: 'top', endPlug: 'behind', endPlugSize: 0.5, color: 'white', size: 3, dash: true}
+	);
+var myLine = new LeaderLine(
+    document.getElementById('start'),
+    document.getElementById('destination3'),
+	{ path: 'straight', startSocket: 'bottom', endSocket: 'top', endPlug: 'behind', endPlugSize: 0.5, color: 'white', size: 3, dash: true}
+	);
+var myLine = new LeaderLine(
+    document.getElementById('start'),
+    document.getElementById('destination5'),
+	{ path: 'straight', startSocket: 'bottom', endSocket: 'top', endPlug: 'behind', endPlugSize: 0.5, color: 'white', size: 3, dash: true}
+	);
+var myLine = new LeaderLine(
+    document.getElementById('start'),
+    document.getElementById('destination2'),
+	{ path: 'straight', startSocket: 'bottom', endSocket: 'top', endPlug: 'behind', endPlugSize: 0.5, color: 'white', size: 3, dash: true}
+	);
+function toggle_visibility(id) {
+       var e = document.getElementById(id);
+       if(e.style.display == 'block')
+          e.style.display = 'none';
+       else
+          e.style.display = 'block';
+    }
+function toggle_visibility1(id) {
+       var e = document.getElementById(id);
+       if(e.style.display == 'grid')
+          e.style.display = 'none';
+       else
+          e.style.display = 'grid';
+    }
+var mybutton = document.getElementById("myBtn");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 250) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+</script>
+
+</div>
+</div>
+<footer>
+
+	<p>Autorem niniejszego serwisu jest Yevheniia Kozhara.
+Serwis ten stanowi integralną część pracy licencjackiej (kierunek: Elektroniczne Przetwarzanie Informacji), przygotowanej pod kierunkiem prof. dr. hab. Grzegorza Bilińskiego, prof. ASP na Wydziale Zarządzania i Komunikacji Społecznej Uniwersytetu Jagiellońskiego.
+
+</footer>
+
+   </body>
+
+</html>

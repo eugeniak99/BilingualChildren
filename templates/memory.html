@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en" style="height:100vh; background-image: url('static/images/memory/tlo.jpg'); background-repeat: no-repeat; background-size: cover; background-attachment: fixed;">
+    <head>
+        <title>Memory - gra w dwu językach!</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+        </head>
+   <body style="background-color:transparent ! important;">
+<center>
+<div style="border-style:dotted; background-color: white; opacity: 0.7; margin: 1%; font-size: 20px;">
+<h2>Wybierz 2 karty z przedstawionych. Jesli przedstawiają to samo zwierzę, to wygrywasz rundę i znikają one ze listy. 
+Jesli nie, to odlóż je z powrotem za pomocą przycisku i próbuj znów! Wygrywasz wtedy, dobierzesz wszystkie karty w pary. Powodzenia!</h2>
+<p>Informacja dla rodziców: po kliknięciu w już otwarty obrazek można odsłuchać wymowę słowa w języku polskim i jego odpowiednika w języku angielskim.
+
+</div>
+<p><a class="btn btn-primary" href="/18_kozhara/poradnik_dwujezyczni">Wróć do strony głównej serwisu</a><center>
+</center>
+
+{% if temp == 20 %}
+<h1 style="color:red;">WYGRAŁEŚ!!!<h1>
+<center><p><a class="btn btn-primary" href="{{url_for('nowa_gra')}}">Rozpocznij nową grę</a><center>
+{% endif %}
+{% if odkryte == 2 %}
+<center>
+<a class="btn btn-primary" href="{{url_for('schowaj')}}">Odłóż</a>
+</center>
+{% endif %}
+<center>
+    <table style="height:70%; background-color: white;">
+
+
+    {% for row in talia.karty.items() | batch(5) %}
+      <tr>
+        {% for ajdi, karta in row %}
+        <td>
+            {% if karta.status == 'closed' and odkryte < 2 %}
+            
+             
+				<a href="{{url_for('otworz', ajdi = ajdi)}}">
+                    <img src="static/images/memory/rewers.jpg" alt="rewers" >
+                </a>
+            {% elif karta.status == 'closed' and odkryte == 2 %}
+                 <img src="static/images/memory/rewers.jpg" alt="rewers" >
+            {% elif karta.status == 'over' %}
+                <img src="static/images/memory/puste.jpg" alt="puste" >
+            {% else %}
+                    {% if talia.karty[ajdi].name == 'zaba'%}
+                        <audio id="audio_play11">
+                            <source src="static/music/memory/zaba.mp3" type="audio/mp3">
+                        </audio>
+                        <img src="static/images/memory/{{talia.karty[ajdi].name}}.jpg" alt="{{talia.karty[ajdi].name}}" onClick="document.getElementById('audio_play11').play(); return false;">
+                    {% elif talia.karty[ajdi].name == 'ptaszek'%}
+                        <audio id="audio_play12">
+                            <source src="static/music/memory/ptak.mp3" type="audio/mp3">
+                        </audio>
+                         <img src="static/images/memory/{{talia.karty[ajdi].name}}.jpg" alt="{{talia.karty[ajdi].name}}" onClick="document.getElementById('audio_play12').play(); return false;">
+                    {% elif talia.karty[ajdi].name == 'pszczola'%}
+                        <audio id="audio_play13">
+                            <source src="static/music/memory/pszczola.mp3" type="audio/mp3">
+                        </audio>
+                         <img src="static/images/memory/{{talia.karty[ajdi].name}}.jpg" alt="{{talia.karty[ajdi].name}}" onClick="document.getElementById('audio_play13').play(); return false;">
+                    {% elif talia.karty[ajdi].name == 'pies'%}
+                        <audio id="audio_play14">
+                            <source src="static/music/memory/pies.mp3" type="audio/mp3">
+                        </audio>
+                         <img src="static/images/memory/{{talia.karty[ajdi].name}}.jpg" alt="{{talia.karty[ajdi].name}}" onClick="document.getElementById('audio_play14').play(); return false;">
+                    {% elif talia.karty[ajdi].name == 'lis'%}
+                        <audio id="audio_play15">
+                            <source src="static/music/memory/lis.mp3" type="audio/mp3">
+                        </audio>
+                        <img src="static/images/memory/{{talia.karty[ajdi].name}}.jpg" alt="{{talia.karty[ajdi].name}}" onClick="document.getElementById('audio_play15').play(); return false;">
+                    {% elif talia.karty[ajdi].name == 'krowa'%}
+                        <audio id="audio_play16">
+                            <source src="static/music/memory/krowa.mp3" type="audio/mp3">
+                        </audio>
+                        <img src="static/images/memory/{{talia.karty[ajdi].name}}.jpg" alt="{{talia.karty[ajdi].name}}" onClick="document.getElementById('audio_play16').play(); return false;">
+                    {% elif talia.karty[ajdi].name == 'jez'%}
+                        <audio id="audio_play17">
+                            <source src="static/music/memory/jez.mp3" type="audio/mp3">
+                        </audio>
+                         <img src="static/images/memory/{{talia.karty[ajdi].name}}.jpg" alt="{{talia.karty[ajdi].name}}" onClick="document.getElementById('audio_play17').play(); return false;">
+                    {% elif talia.karty[ajdi].name == 'flamingo'%}
+                        <audio id="audio_play18">
+                            <source src="static/music/memory/flaming.mp3" type="audio/mp3">
+                        </audio>
+                         <img src="static/images/memory/{{talia.karty[ajdi].name}}.jpg" alt="{{talia.karty[ajdi].name}}" onClick="document.getElementById('audio_play18').play(); return false;">
+                    {% elif talia.karty[ajdi].name == 'waz'%}
+                        <audio id="audio_play19">
+                            <source src="static/music/memory/waz.mp3" type="audio/mp3">
+                        </audio>
+                      <img src="static/images/memory/{{talia.karty[ajdi].name}}.jpg" alt="{{talia.karty[ajdi].name}}" onClick="document.getElementById('audio_play19').play(); return false;">
+                    {% elif talia.karty[ajdi].name == 'kaczka'%}
+                        <audio id="audio_play20">
+                            <source src="static/music/memory/kaczka.mp3" type="audio/mp3">
+                        </audio>
+                      <img src="static/images/memory/{{talia.karty[ajdi].name}}.jpg" alt="{{talia.karty[ajdi].name}}" onClick="document.getElementById('audio_play20').play(); return false;">
+                    {% endif %}
+           {% endif %}
+            </td>
+      {% endfor %}
+      </tr>
+     {% endfor %}            
+    </table>
+</center>
+
+
+</body>
+</html>
+
+

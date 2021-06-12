@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" style="height:100vh; background-image: url('static/images/wyspa/wyspa_tlo.jpg'); background-repeat: no-repeat; background-size: cover; background-attachment: fixed;">
+    <head>
+        <title>Sprostaj się wyzwaniu</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+        </head>
+        <body style="margin: auto; margin-top: 5%; min-height: 70vh; opacity: 95%; width: 60%; background-color: #66FFCC;">
+        <center>{% if game['wygrana'] == False %}
+        <p><h1 style="margin-top: 2%;">Niestety, tym razem przegrałeś i nie udało ci się przeżyć na Samotnej Wyspie. Powodzenia następnym razem!</h1>
+		<img src="static/images/wyspa/looser.jpg" style="width: 50%;">
+        {% elif game['wygrana'] == True %}
+        <h1 style="margin-top: 2%;">Wygrales! Jesteś mistrzem Samotnej Wyspy</h1>
+		<img src="static/images/wyspa/winner.jpg" style="width: 50%;">
+        {% endif %}
+        <p><a style="margin: 3%;" class="btn btn-primary" href="wyspa">Kliknij tutaj by zacząć nową grę</a>
+        <p><a class="btn btn-primary" href="/18_kozhara/poradnik_dwujezyczni">Kliknij tutaj by wrócić do strony głównej serwisu</a><center>
+        </body>
+    </html>
+
+
