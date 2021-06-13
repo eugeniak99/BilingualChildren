@@ -13,7 +13,7 @@ project_dir = os.path.dirname(os.path.abspath(__file__))
 
 #app.config["SQLALCHEMY_DATABASE_URI"] = database_file
 #app.config['WHOOSH_BASE'] = 'whoosh'
-app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://18_kozhara:M7e2x4f2w7@127.0.0.1/18_kozhara'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://18_kozhara:your_password@127.0.0.1/your_db'
 
 
 db = SQLAlchemy(app)
